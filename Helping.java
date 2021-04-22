@@ -1,9 +1,7 @@
 package com.game;
 
-import javax.swing.*;
-
-public class Helping {
-  
+public class Helping 
+{
     public static void displayArray(char[][] arr)
     {
         int i,j;
@@ -21,15 +19,44 @@ public class Helping {
             System.out.println("    -----------------------------");
         }
     }
-  
-    public static void displayOutOfRange(String type)
+    public static boolean isValidRow(int row)
     {
-        JOptionPane.showMessageDialog(null, "....Input out of range. Enter a valid " + type +" number.");
+        if( row < 2 || row > 7 )
+        {
+            System.out.println("....ERROR....Input out of range. Enter a valid row number.");
+            return false;
+        }
+        else
+            return true;
     }
-  
-    public static void displayOccupiedPlace(int r, int c)
+    public static boolean isValidColumn(int column)
     {
-        JOptionPane.showMessageDialog(null,  "Row: " + (r-1) +  " & Column: " + (c-1) + " is occupied. Please choose another place." );
+        if( column < 2 || column > 8 )
+        {
+            System.out.println("....ERROR....Input out of range. Enter a valid column number.");
+            return false;
+        }
+        else
+            return true;
     }
-  
+    public  static boolean isXOrO(char ch)
+    {
+        if( ch == 'x' || ch == 'o' )
+            return true;
+        else
+        {
+            System.out.println("....ERROR.... You can choose either 'x' or 'o' only. Choose again please.");
+            return false;
+        }
+    }
+    public  static boolean isEmptyPlace(char ch, int row, int column)
+    {
+        if( ch != ' ' )
+        {
+            System.out.println("Row: " + (row-1) +  " & Column: " + (column-1) + " is occupied. Please choose another place." );
+            return false;
+        }
+        else
+            return true;
+    }
 }
