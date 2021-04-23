@@ -73,7 +73,7 @@ public class Main
                         System.out.print("Enter '" + player1.getPlayerX_O() + "' in the row: ");
                         testingStringLength = rowSc.next();
                         if( testingStringLength.length() != 1)
-                            row = 100; // why row = 100 ?? 
+                            row = 100;
                         else
                             row = testingStringLength.charAt(0) - 48 + 1; // need explenation !!
                     }while( !Helping.isValidRow(row) );
