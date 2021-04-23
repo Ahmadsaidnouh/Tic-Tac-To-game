@@ -23,7 +23,7 @@ public class Helping
     {
         if( row < 2 || row > 7 )
         {
-            System.out.println("....ERROR....Input out of range. Enter a valid row number.");
+            System.out.println("....ERROR....(OUT OF RANGE) or (NOT INTEGER TYPE) Input. Enter a valid row number please.");
             return false;
         }
         else
@@ -33,7 +33,7 @@ public class Helping
     {
         if( column < 2 || column > 8 )
         {
-            System.out.println("....ERROR....Input out of range. Enter a valid column number.");
+            System.out.println("....ERROR....(OUT OF RANGE) or (NOT INTEGER TYPE) Input. Enter a valid column number please.");
             return false;
         }
         else
