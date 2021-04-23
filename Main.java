@@ -7,16 +7,20 @@ public class Main
     public static void main(String[] args) {
         char plX_O;
         String plName;
+        char pl2X_O;
+        String pl2Name;
         String testingXOrOLength;
-        Scanner playerNameSc = new Scanner(System.in);
-        Scanner playerX_OSc = new Scanner(System.in);
+        Scanner plNameSc = new Scanner(System.in);
+        Scanner plX_OSc = new Scanner(System.in);
+        Scanner pl2NameSc = new Scanner(System.in);
+        Scanner pl2X_OSc = new Scanner(System.in);
         //scan the information of player 1.
-        System.out.print("Player 1 name: ");
-        plName = playerNameSc.next();
+        System.Out.println("Please enter the name of player 1: ");
+        plName = plNameSc.next();
         do
         {
-            System.out.print("Player 1 choose 'x' or 'o': ");
-            testingXOrOLength = playerX_OSc.next();
+            System.Out.println("choose 'X' or 'O' [please enter either X or O only]: ");
+            testingXOrOLength = plX_OSc.next();
             if(testingXOrOLength.length() != 1)
                 plX_O = 'z';
             else
@@ -26,22 +30,22 @@ public class Main
         Player player1 = new Player(plName, plX_O);
         System.out.println();
         //scan the information of player 2.
-        System.out.print("Player 2 name: ");
-        plName = playerNameSc.next();
+        System.Out.println("Please enter the name of player 2: ");
+        pl2Name = pl2NameSc.next();
         if( player1.getPlayerX_O() == 'x' )
         {
-            plX_O = 'o';
+            pl2X_O = 'o';
             System.out.println("Player 2 you are playing with 'o'.");
         }
         else
         {
-            plX_O = 'x';
+            pl2X_O = 'x';
             System.out.println("Player 2 you are playing with 'x'.");
         }
         //constructing player2 object and setting the information to it.
-        Player player2 = new Player(plName, plX_O);
+        Player player2 = new Player(pl2Name, pl2X_O);
         System.out.println();
-        System.out.println("........THE GAME STAAAARTS........");
+        System.out.println("!!!........THE GAME STAAAARTS........!!!");
         Scanner rowSc = new Scanner(System.in);
         Scanner columnSc = new Scanner(System.in);
         boolean isWinnerFound = false;
@@ -49,15 +53,15 @@ public class Main
         int i,j;        //for iterating in for loops
         char[][] arr = new char[10][11];
         //setting the default character in the 2D array to be a space character ' '.
-        for( i = 0; i < 9; i++)
-            for( j = 0; j < 10; j++)
+        for( i = 0; i < 10; i++)
+            for( j = 0; j < 11; j++)
                 arr[i][j] = ' ';
 
         String testingStringLength;
         while( (!isWinnerFound) && (revolver <= 42) )
         {
             Helping.displayArray(arr);
-            //if revolver is odd, then it's player1 turn.
+            //if revolver is odd, then it's player1 turn, remember it starts counting from 1.
             if(revolver % 2 == 1)
             {
                 System.out.println(player1.getPlayerName());
@@ -70,9 +74,9 @@ public class Main
                         System.out.print("Enter '" + player1.getPlayerX_O() + "' in the row: ");
                         testingStringLength = rowSc.next();
                         if( testingStringLength.length() != 1)
-                            row = 100;
+                            row = 100; // why row = 100 ?? 
                         else
-                            row = testingStringLength.charAt(0) - 48 + 1;
+                            row = testingStringLength.charAt(0) - 48 + 1; // need explenation !!
                     }while( !Helping.isValidRow(row) );
                     //entering and validating column is an integer in range{1--->7}
                     do
