@@ -1,10 +1,9 @@
-package com.company;
+package com.game;
 
 import java.util.Scanner;
 
-public class Main {
-
-
+public class Main 
+{
     public static void main(String[] args) {
         char plX_O;
         String plName;
@@ -23,7 +22,7 @@ public class Main {
             else
                 plX_O = testingXOrOLength.charAt(0);
         }while( !Helping.isXOrO(plX_O) );
-        //constructing player1 object and setting the inputs to it.
+        //constructing player1 object and setting the information to it.
         Player player1 = new Player(plName, plX_O);
         System.out.println();
         //scan the information of player 2.
@@ -39,7 +38,7 @@ public class Main {
             plX_O = 'x';
             System.out.println("Player 2 you are playing with 'x'.");
         }
-        //constructing player2 object and setting the inputs to it.
+        //constructing player2 object and setting the information to it.
         Player player2 = new Player(plName, plX_O);
         System.out.println();
         System.out.println("........THE GAME STAAAARTS........");
@@ -65,7 +64,7 @@ public class Main {
                 //entering row and column and validating that the chosen place is empty.
                 do
                 {
-                    //entering and validating that row is in range{1--->6}
+                    //entering and validating that row is an integer in range{1--->6}
                     do
                     {
                         System.out.print("Enter '" + player1.getPlayerX_O() + "' in the row: ");
@@ -75,7 +74,7 @@ public class Main {
                         else
                             row = testingStringLength.charAt(0) - 48 + 1;
                     }while( !Helping.isValidRow(row) );
-                    //entering and validating column is in range{1--->7}
+                    //entering and validating column is an integer in range{1--->7}
                     do
                     {
                         System.out.print("Enter '" + player1.getPlayerX_O() + "' in the column: ");
