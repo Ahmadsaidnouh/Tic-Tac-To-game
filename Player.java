@@ -21,7 +21,7 @@ public class Player {
     {
         System.out.println();
         System.out.println("..........................................");
-        System.out.println(":Congratulations " + playerName + ". You won the game:");
+        System.out.println("Congratulations: " + playerName + ". You won the game:");
         System.out.println("..........................................");
     }
     public boolean test(char [][] arr , int row , int column, char ch)
@@ -30,17 +30,17 @@ public class Player {
         r = row;
         c = column;
         if( (arr[r-2][c] == ch && arr[r-1][c] == ch) ||
-                (arr[r+1][c] == ch && arr[r+2][c] == ch) ||
-                (arr[r][c-2] == ch && arr[r][c-1] == ch) ||
-                (arr[r][c+1] == ch && arr[r][c+2] == ch) ||
-                (arr[r-1][c+1] == ch && arr[r-2][c+2] == ch) ||
-                (arr[r+1][c+1] == ch && arr[r+2][c+2] == ch) ||
-                (arr[r-2][c-2] == ch && arr[r-1][c-1] == ch) ||
-                (arr[r+1][c-1] == ch && arr[r+2][c-2] == ch) ||
-                (arr[r][c-1] == ch && arr[r][c+1] == ch) ||
-                (arr[r-1][c] == ch && arr[r+1][c] == ch) ||
-                (arr[r-1][c+1] == ch && arr[r+1][c-1] == ch) ||
-                (arr[r-1][c-1] == ch && arr[r+1][c+1] == ch)  )
+            (arr[r+1][c] == ch && arr[r+2][c] == ch) ||
+            (arr[r][c-2] == ch && arr[r][c-1] == ch) ||
+            (arr[r][c+1] == ch && arr[r][c+2] == ch) ||
+            (arr[r-1][c+1] == ch && arr[r-2][c+2] == ch) ||
+            (arr[r+1][c+1] == ch && arr[r+2][c+2] == ch) ||
+            (arr[r-2][c-2] == ch && arr[r-1][c-1] == ch) ||
+            (arr[r+1][c-1] == ch && arr[r+2][c-2] == ch) ||
+            (arr[r][c-1] == ch && arr[r][c+1] == ch) ||
+            (arr[r-1][c] == ch && arr[r+1][c] == ch) ||
+            (arr[r-1][c+1] == ch && arr[r+1][c-1] == ch) ||
+            (arr[r-1][c-1] == ch && arr[r+1][c+1] == ch)  )
         {
             Helping.displayArray(arr);
             this.displayWinMessage();
