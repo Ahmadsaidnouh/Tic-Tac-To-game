@@ -1,9 +1,11 @@
-package com.game;
+package com.company;
 
 import java.util.Scanner;
 
-public class Main 
-{
+public class Main {
+
+
+    public static void main(String[] args) {
         char plX_O;
         String plName;
         String testingXOrOLength;
@@ -129,4 +131,3 @@ public class Main
         }
     }
 }
-
