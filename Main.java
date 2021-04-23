@@ -1,4 +1,4 @@
-package com.game;
+//package com.game;
 
 import java.util.Scanner;
 
@@ -13,13 +13,12 @@ public class Main
         Scanner plNameSc = new Scanner(System.in);
         Scanner plX_OSc = new Scanner(System.in);
         Scanner pl2NameSc = new Scanner(System.in);
-        Scanner pl2X_OSc = new Scanner(System.in);
         //scan the information of player 1.
-        System.Out.println("Please enter the name of player 1: ");
+        System.out.println("Please enter the name of player 1: ");
         plName = plNameSc.next();
         do
         {
-            System.Out.println("choose 'X' or 'O' [please enter either X or O only]: ");
+            System.out.println("choose 'X' or 'O' [please enter either X or O only]: ");
             testingXOrOLength = plX_OSc.next();
             if(testingXOrOLength.length() != 1)
                 plX_O = 'z';
@@ -30,7 +29,7 @@ public class Main
         Player player1 = new Player(plName, plX_O);
         System.out.println();
         //scan the information of player 2.
-        System.Out.println("Please enter the name of player 2: ");
+        System.out.println("Please enter the name of player 2: ");
         pl2Name = pl2NameSc.next();
         if( player1.getPlayerX_O() == 'x' )
         {
