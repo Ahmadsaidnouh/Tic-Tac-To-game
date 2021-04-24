@@ -9,13 +9,13 @@ public class Helping
         System.out.println("    -----------------------------");
         for( i = 2; i <= 7; i++)
         {
-            System.out.print("(" + (i+1) + ") ");
+            System.out.print("(" + (i-1) + ") ");
             for( j = 2; j <= 8; j++)
             {
-                System.out.print("| " + arr[i][j] + " | ");
+                System.out.print("| " + arr[i][j]);
             }
-            //System.out.print("|");
-            //System.out.println();
+            System.out.print("|");
+            System.out.println();
             System.out.println("    -----------------------------");
         }
     }
