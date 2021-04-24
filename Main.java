@@ -18,7 +18,7 @@ public class Main
         plName = plNameSc.next();
         do
         {
-            System.out.print("choose 'x' or 'o' [please enter either 'x' or 'o' only]: ");
+            System.out.print("Choose 'x' or 'o' [please enter either 'x' or 'o' only]: ");
             testingXOrOLength = plX_OSc.next();
             if(testingXOrOLength.length() != 1)
                 plX_O = 'z';
@@ -44,7 +44,7 @@ public class Main
         //constructing player2 object and setting the information to it.
         Player player2 = new Player(pl2Name, pl2X_O);
         System.out.println();
-        System.out.println("!!!........THE GAME STAAAARTS........!!!");
+        System.out.println("!!!........THE GAME STAAAARTS........!!!\n");
         Scanner rowSc = new Scanner(System.in);
         Scanner columnSc = new Scanner(System.in);
         boolean isWinnerFound = false;
