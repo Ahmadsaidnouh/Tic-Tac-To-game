@@ -53,7 +53,7 @@ public class Helping
     {
         if( ch != ' ' )
         {
-            System.out.println("Row: " + (row+1) +  " & Column: " + (column+1) + " is occupied. Please choose another place." );
+            System.out.println("Row: " + (row-1) +  " & Column: " + (column-1) + " is occupied. Please choose another place." );
             return false;
         }
         else
