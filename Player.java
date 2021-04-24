@@ -21,7 +21,7 @@ public class Player {
     {
         System.out.println();
         System.out.println("..........................................");
-        System.out.println("Congratulations: " + playerName + ". You won the game:");
+        System.out.println("Congratulations " + playerName + ". You won the game");
         System.out.println("..........................................");
     }
     public boolean test(char [][] arr , int row , int column, char ch)
