@@ -12,10 +12,9 @@ public class Helping
             System.out.print("(" + (i-1) + ") ");
             for( j = 2; j <= 8; j++)
             {
-                System.out.print("| " + arr[i][j]);
+                System.out.print("| " + arr[i][j] + " ");
             }
-            System.out.print("|");
-            System.out.println();
+            System.out.print("|\n");
             System.out.println("    -----------------------------");
         }
     }
