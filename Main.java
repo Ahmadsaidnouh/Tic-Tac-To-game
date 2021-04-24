@@ -49,7 +49,7 @@ public class Main
         Scanner columnSc = new Scanner(System.in);
         boolean isWinnerFound = false;
         int row,column,revolver=1;
-        int i,j;        //for iterating in for loops
+        int i,j;       //for iterating in for loops
         char[][] arr = new char[10][11];
         //setting the default character in the 2D array to be a space character ' '.
         for( i = 0; i < 10; i++)
