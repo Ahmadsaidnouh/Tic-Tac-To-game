@@ -1,4 +1,4 @@
-//package com.game;
+package com.game;
 
 import java.util.Scanner;
 
@@ -14,11 +14,11 @@ public class Main
         Scanner plX_OSc = new Scanner(System.in);
         Scanner pl2NameSc = new Scanner(System.in);
         //scan the information of player 1.
-        System.out.println("Please enter the name of player 1: ");
+        System.out.print("Please enter the name of player 1: ");
         plName = plNameSc.next();
         do
         {
-            System.out.println("choose 'X' or 'O' [please enter either X or O only]: ");
+            System.out.print("choose 'x' or 'o' [please enter either 'x' or 'o' only]: ");
             testingXOrOLength = plX_OSc.next();
             if(testingXOrOLength.length() != 1)
                 plX_O = 'z';
@@ -29,7 +29,7 @@ public class Main
         Player player1 = new Player(plName, plX_O);
         System.out.println();
         //scan the information of player 2.
-        System.out.println("Please enter the name of player 2: ");
+        System.out.print("Please enter the name of player 2: ");
         pl2Name = pl2NameSc.next();
         if( player1.getPlayerX_O() == 'x' )
         {
@@ -72,20 +72,24 @@ public class Main
                     {
                         System.out.print("Enter '" + player1.getPlayerX_O() + "' in the row: ");
                         testingStringLength = rowSc.next();
+                        //Since we want the string length to be 1, so if the length of the entered string is not 1,
+                        //we will assign a big value to row so that it produces error when entering isValidRow() method.
                         if( testingStringLength.length() != 1)
                             row = 100;
                         else
-                            row = testingStringLength.charAt(0) - 48 + 1; // need explenation !!
+                            row = testingStringLength.charAt(0) + 2 - 1 - 48;
                     }while( !Helping.isValidRow(row) );
                     //entering and validating column is an integer in range{1--->7}
                     do
                     {
                         System.out.print("Enter '" + player1.getPlayerX_O() + "' in the column: ");
                         testingStringLength = columnSc.next();
+                        //Since we want the string length to be 1, so if the length of the entered string is not 1,
+                        //we will assign a big value to column so that it produces error when entering isValidColumn() method.
                         if( testingStringLength.length() != 1)
                             column = 100;
                         else
-                            column = testingStringLength.charAt(0) - 48 + 1;
+                            column = testingStringLength.charAt(0) + 2 - 1 - 48;
                     }while( !Helping.isValidColumn(column) );
                 }while(!Helping.isEmptyPlace(arr[row][column], row, column));
                 arr[row][column] = player1.getPlayerX_O();
@@ -106,7 +110,7 @@ public class Main
                         if( testingStringLength.length() != 1)
                             row = 100;
                         else
-                            row = testingStringLength.charAt(0) - 48 + 1;
+                            row = testingStringLength.charAt(0) + 2 - 1 - 48;
                     }while( !Helping.isValidRow(row) );
                     //entering and validating column is in range{1--->7}
                     do
@@ -116,7 +120,7 @@ public class Main
                         if( testingStringLength.length() != 1)
                             column = 100;
                         else
-                            column = testingStringLength.charAt(0) - 48 + 1;
+                            column = testingStringLength.charAt(0) + 2 - 1 - 48;
                     }while( !Helping.isValidColumn(column) );
                 }while(!Helping.isEmptyPlace(arr[row][column], row, column));
                 arr[row][column] = player2.getPlayerX_O();
