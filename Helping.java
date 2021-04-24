@@ -5,6 +5,7 @@ public class Helping
     public static void displayArray(char[][] arr)
     {
         int i,j;
+        
         System.out.println("     (1) (2) (3) (4) (5) (6) (7)");
         System.out.println("    -----------------------------");
         for( i = 2; i <= 7; i++)
